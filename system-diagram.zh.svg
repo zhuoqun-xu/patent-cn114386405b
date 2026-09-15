@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="710" viewBox="0 0 1440 710" role="img" aria-labelledby="title desc">
+  <title id="title">公开专利披露的医疗测试数据生成流程</title>
+  <desc id="desc">终端请求与目标表信息进入图结构构建；关联发现和字段匹配确定字段含义及关系；已有数据集合用于采样，医疗数据字典用于数据构造，最后导出医疗测试数据。</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f9fc}.ink{fill:#172338}.muted{fill:#54657a}.border{stroke:#ccd5e2;stroke-width:2}.source{fill:#edf3ff}.stage{fill:#fff}.output{fill:#e9f6ef}.flow{fill:none;stroke:#4d6a94;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#head)}.reference{fill:none;stroke:#8096b7;stroke-width:2.5;stroke-dasharray:8 7;marker-end:url(#head)}.heading{font:700 29px Arial,'PingFang SC',sans-serif}.lane{font:700 16px Arial,'PingFang SC',sans-serif;letter-spacing:1px}.boxTitle{font:700 20px Arial,'PingFang SC',sans-serif}.body{font:16px Arial,'PingFang SC',sans-serif}.note{font:14px Arial,'PingFang SC',sans-serif}
+    </style>
+    <marker id="head" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#4d6a94" stroke-width="2"/></marker>
+  </defs>
+  <rect class="bg" width="1440" height="710"/>
+  <text x="45" y="52" class="heading ink">基于结构的医疗测试数据生成</text>
+  <text x="45" y="82" class="body muted">专利 CN114386405B · 结构感知生成流程</text>
+  <text x="45" y="123" class="lane muted">公开披露的输入与数据源</text>
+  <text x="400" y="123" class="lane muted">公开披露的处理阶段</text>
+  <text x="1205" y="123" class="lane muted">输出</text>
+
+  <rect x="45" y="145" width="280" height="82" rx="15" class="source border"/>
+  <text x="65" y="176" class="boxTitle ink">终端请求</text><text x="65" y="200" class="body muted">表名、连接、数量与参数</text>
+  <rect x="45" y="247" width="280" height="82" rx="15" class="source border"/>
+  <text x="65" y="278" class="boxTitle ink">目标数据表信息</text><text x="65" y="302" class="body muted">字段名与表结构</text>
+  <rect x="45" y="349" width="280" height="82" rx="15" class="source border"/>
+  <text x="65" y="380" class="boxTitle ink">历史医疗数据库</text><text x="65" y="404" class="body muted">字段含义匹配来源</text>
+  <rect x="45" y="451" width="280" height="82" rx="15" class="source border"/>
+  <text x="65" y="482" class="boxTitle ink">已有数据集合</text><text x="65" y="506" class="body muted">采样来源</text>
+  <rect x="45" y="553" width="280" height="82" rx="15" class="source border"/>
+  <text x="65" y="584" class="boxTitle ink">医疗数据字典</text><text x="65" y="608" class="body muted">医学相关数据来源</text>
+
+  <rect x="400" y="145" width="220" height="105" rx="15" class="stage border"/>
+  <text x="421" y="177" class="boxTitle ink">1 · 图结构构建</text>
+  <text x="421" y="207" class="body muted">字段名转为节点</text><text x="421" y="231" class="body muted">每表一张无向图</text>
+  <rect x="650" y="145" width="220" height="105" rx="15" class="stage border"/>
+  <text x="671" y="177" class="boxTitle ink">2 · 关联发现</text>
+  <text x="671" y="207" class="body muted">排序＋二分／BFS</text><text x="671" y="231" class="body muted">通过关联节点合并图</text>
+  <rect x="900" y="145" width="245" height="105" rx="15" class="stage border"/>
+  <text x="921" y="177" class="boxTitle ink">3 · 字段语义匹配</text>
+  <text x="921" y="207" class="body muted">DFS＋适配图的 KMP</text><text x="921" y="231" class="body muted">获得字段含义与关联</text>
+  <rect x="650" y="349" width="220" height="105" rx="15" class="stage border"/>
+  <text x="671" y="381" class="boxTitle ink">4 · 生成规则采样</text>
+  <text x="671" y="411" class="body muted">遍历关联图</text><text x="671" y="435" class="body muted">按含义与参数采样</text>
+  <rect x="900" y="349" width="245" height="105" rx="15" class="stage border"/>
+  <text x="921" y="381" class="boxTitle ink">5 · 数据构造与导出</text>
+  <text x="921" y="411" class="body muted">关联规则＋字段类型规则</text><text x="921" y="435" class="body muted">字典抽取、格式化</text>
+  <rect x="1205" y="349" width="180" height="105" rx="15" class="output border"/>
+  <text x="1226" y="382" class="boxTitle ink">医疗测试数据</text><text x="1226" y="412" class="body muted">目标格式</text><text x="1226" y="436" class="body muted">导出</text>
+
+  <path d="M325 186 H400" class="flow"/>
+  <path d="M325 288 H360 V223 H400" class="reference"/>
+  <path d="M620 198 H650" class="flow"/>
+  <path d="M870 198 H900" class="flow"/>
+  <path d="M325 390 H580 V295 H887 V234 H900" class="reference"/>
+  <path d="M1022 250 V300 H760 V349" class="flow"/>
+  <path d="M325 492 H620 V401 H650" class="reference"/>
+  <path d="M870 401 H900" class="flow"/>
+  <path d="M325 594 H884 V425 H900" class="reference"/>
+  <path d="M1145 401 H1205" class="flow"/>
+
+  <text x="400" y="525" class="note muted">实线：处理流程　虚线：公开披露的参考数据源</text>
+</svg>

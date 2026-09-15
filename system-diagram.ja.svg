@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="710" viewBox="0 0 1440 710" role="img" aria-labelledby="title desc">
+  <title id="title">公開特許に記載された医療テストデータ生成の流れ</title>
+  <desc id="desc">端末からの要求と対象テーブル情報を使ってグラフを構築し、関連の発見と項目の意味の照合を行う。既存データ集合からの標本抽出と医療データ辞書の参照を経て、医療テストデータを出力する。</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f9fc}.ink{fill:#172338}.muted{fill:#54657a}.border{stroke:#ccd5e2;stroke-width:2}.source{fill:#edf3ff}.stage{fill:#fff}.output{fill:#e9f6ef}.flow{fill:none;stroke:#4d6a94;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#head)}.reference{fill:none;stroke:#8096b7;stroke-width:2.5;stroke-dasharray:8 7;marker-end:url(#head)}.heading{font:700 29px Arial,'Hiragino Kaku Gothic ProN',sans-serif}.lane{font:700 16px Arial,'Hiragino Kaku Gothic ProN',sans-serif;letter-spacing:1px}.boxTitle{font:700 20px Arial,'Hiragino Kaku Gothic ProN',sans-serif}.body{font:16px Arial,'Hiragino Kaku Gothic ProN',sans-serif}.note{font:14px Arial,'Hiragino Kaku Gothic ProN',sans-serif}
+    </style>
+    <marker id="head" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#4d6a94" stroke-width="2"/></marker>
+  </defs>
+  <rect class="bg" width="1440" height="710"/>
+  <text x="45" y="52" class="heading ink">構造を考慮した医療テストデータ生成</text>
+  <text x="45" y="82" class="body muted">特許 CN114386405B · 構造を考慮した生成の流れ</text>
+  <text x="45" y="123" class="lane muted">公開文献に記載された入力とデータ源</text>
+  <text x="400" y="123" class="lane muted">公開文献に記載された処理</text>
+  <text x="1205" y="123" class="lane muted">出力</text>
+
+  <rect x="45" y="145" width="280" height="82" rx="15" class="source border"/>
+  <text x="65" y="176" class="boxTitle ink">端末からの要求</text><text x="65" y="200" class="body muted">表名・接続・件数・条件</text>
+  <rect x="45" y="247" width="280" height="82" rx="15" class="source border"/>
+  <text x="65" y="278" class="boxTitle ink">対象テーブル情報</text><text x="65" y="302" class="body muted">項目名と表の構造</text>
+  <rect x="45" y="349" width="280" height="82" rx="15" class="source border"/>
+  <text x="65" y="380" class="boxTitle ink">過去の医療DB</text><text x="65" y="404" class="body muted">項目の意味の照合元</text>
+  <rect x="45" y="451" width="280" height="82" rx="15" class="source border"/>
+  <text x="65" y="482" class="boxTitle ink">既存データ集合</text><text x="65" y="506" class="body muted">サンプリング元</text>
+  <rect x="45" y="553" width="280" height="82" rx="15" class="source border"/>
+  <text x="65" y="584" class="boxTitle ink">医療データ辞書</text><text x="65" y="608" class="body muted">医療用語・値の参照元</text>
+
+  <rect x="400" y="145" width="220" height="105" rx="15" class="stage border"/>
+  <text x="421" y="177" class="boxTitle ink">1 · グラフ構築</text>
+  <text x="421" y="207" class="body muted">項目名をノードに変換</text><text x="421" y="231" class="body muted">各表に無向グラフ</text>
+  <rect x="650" y="145" width="220" height="105" rx="15" class="stage border"/>
+  <text x="671" y="177" class="boxTitle ink">2 · 関連の発見</text>
+  <text x="671" y="207" class="body muted">整列・二分探索</text><text x="671" y="231" class="body muted">BFS で関連を統合</text>
+  <rect x="900" y="145" width="245" height="105" rx="15" class="stage border"/>
+  <text x="921" y="177" class="boxTitle ink">3 · 項目の意味の照合</text>
+  <text x="921" y="207" class="body muted">深さ優先＋グラフ KMP</text><text x="921" y="231" class="body muted">意味と関連を取得</text>
+  <rect x="650" y="349" width="220" height="105" rx="15" class="stage border"/>
+  <text x="671" y="381" class="boxTitle ink">4 · 生成規則の導出</text>
+  <text x="671" y="411" class="body muted">関連グラフを走査</text><text x="671" y="435" class="body muted">意味と条件で標本抽出</text>
+  <rect x="900" y="349" width="245" height="105" rx="15" class="stage border"/>
+  <text x="921" y="381" class="boxTitle ink">5 · データ構築・出力</text>
+  <text x="921" y="411" class="body muted">関連・項目型の規則</text><text x="921" y="435" class="body muted">辞書参照と形式化</text>
+  <rect x="1205" y="349" width="180" height="105" rx="15" class="output border"/>
+  <text x="1226" y="382" class="boxTitle ink">医療テスト</text><text x="1226" y="406" class="boxTitle ink">データ</text><text x="1226" y="434" class="body muted">指定形式で出力</text>
+
+  <path d="M325 186 H400" class="flow"/>
+  <path d="M325 288 H360 V223 H400" class="reference"/>
+  <path d="M620 198 H650" class="flow"/>
+  <path d="M870 198 H900" class="flow"/>
+  <path d="M325 390 H580 V295 H887 V234 H900" class="reference"/>
+  <path d="M1022 250 V300 H760 V349" class="flow"/>
+  <path d="M325 492 H620 V401 H650" class="reference"/>
+  <path d="M870 401 H900" class="flow"/>
+  <path d="M325 594 H884 V425 H900" class="reference"/>
+  <path d="M1145 401 H1205" class="flow"/>
+
+  <text x="400" y="525" class="note muted">実線：処理の流れ　破線：公開文献に記載された参照データ源</text>
+</svg>

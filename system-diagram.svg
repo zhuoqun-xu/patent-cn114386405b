@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="760" viewBox="0 0 1440 760" role="img" aria-labelledby="title desc">
+  <title id="title">Public-patent reconstruction of a medical test-data generation pipeline</title>
+  <desc id="desc">Terminal request and table metadata enter graph construction. Association discovery and field matching establish field meanings and relationships. An existing data collection supports sampling, and a medical dictionary supports construction of formatted medical test data.</desc>
+  <defs>
+    <style>
+      .bg{fill:#f7f9fc}.ink{fill:#172338}.muted{fill:#54657a}.border{stroke:#ccd5e2;stroke-width:2}.source{fill:#edf3ff}.stage{fill:#ffffff}.output{fill:#e9f6ef}.arrow{fill:none;stroke:#4d6a94;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#head)}.dash{fill:none;stroke:#8096b7;stroke-width:2.5;stroke-dasharray:8 7;marker-end:url(#head)}.title{font:700 29px Arial,sans-serif}.lane{font:700 17px Arial,sans-serif;letter-spacing:1px}.boxTitle{font:700 20px Arial,sans-serif}.body{font:16px Arial,sans-serif}.small{font:14px Arial,sans-serif}
+    </style>
+    <marker id="head" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M1 1 L9 5 L1 9" fill="none" stroke="#4d6a94" stroke-width="2"/></marker>
+  </defs>
+  <rect class="bg" width="1440" height="760"/>
+  <text x="56" y="55" class="title ink">Structure-aware medical test-data generation</text>
+  <text x="56" y="83" class="body muted">Patent CN114386405B · structure-aware generation workflow</text>
+
+  <text x="56" y="130" class="lane muted">DISCLOSED INPUTS AND SOURCES</text>
+  <text x="422" y="130" class="lane muted">DISCLOSED PROCESS</text>
+  <text x="1200" y="130" class="lane muted">OUTPUT</text>
+
+  <rect x="56" y="158" width="292" height="96" rx="16" class="source border"/>
+  <text x="78" y="190" class="boxTitle ink">Terminal request</text>
+  <text x="78" y="218" class="body muted">Table names · DB connection</text>
+  <text x="78" y="241" class="body muted">Generation count / parameters</text>
+
+  <rect x="56" y="286" width="292" height="76" rx="16" class="source border"/>
+  <text x="78" y="318" class="boxTitle ink">Target table information</text>
+  <text x="78" y="345" class="body muted">Field names and table structure</text>
+
+  <rect x="56" y="395" width="292" height="77" rx="16" class="source border"/>
+  <text x="78" y="428" class="boxTitle ink">Historical medical DB</text>
+  <text x="78" y="455" class="body muted">Field-meaning matching source</text>
+
+  <rect x="56" y="505" width="292" height="77" rx="16" class="source border"/>
+  <text x="78" y="538" class="boxTitle ink">Existing data collection</text>
+  <text x="78" y="565" class="body muted">Sampling source</text>
+
+  <rect x="56" y="615" width="292" height="77" rx="16" class="source border"/>
+  <text x="78" y="648" class="boxTitle ink">Medical data dictionary</text>
+  <text x="78" y="675" class="body muted">Medical term / value source</text>
+
+  <rect x="422" y="158" width="229" height="112" rx="16" class="stage border"/>
+  <text x="445" y="191" class="boxTitle ink">1 · Graph construction</text>
+  <text x="445" y="219" class="body muted">Field names → nodes</text>
+  <text x="445" y="245" class="body muted">One undirected graph</text>
+  <text x="445" y="266" class="body muted">per table</text>
+
+  <rect x="694" y="158" width="229" height="112" rx="16" class="stage border"/>
+  <text x="717" y="191" class="boxTitle ink">2 · Associations</text>
+  <text x="717" y="219" class="body muted">Sort + binary/BFS search</text>
+  <text x="717" y="245" class="body muted">Merge graphs through</text>
+  <text x="717" y="266" class="body muted">associated nodes</text>
+
+  <rect x="966" y="158" width="229" height="112" rx="16" class="stage border"/>
+  <text x="989" y="191" class="boxTitle ink">3 · Field matching</text>
+  <text x="989" y="219" class="body muted">DFS + graph-adapted KMP</text>
+  <text x="989" y="245" class="body muted">Field meaning and</text>
+  <text x="989" y="266" class="body muted">field relationships</text>
+
+  <rect x="694" y="353" width="229" height="112" rx="16" class="stage border"/>
+  <text x="717" y="386" class="boxTitle ink">4 · Rule sampling</text>
+  <text x="717" y="414" class="body muted">BFS graph traversal</text>
+  <text x="717" y="440" class="body muted">Random sampling with</text>
+  <text x="717" y="461" class="body muted">field meanings/parameters</text>
+
+  <rect x="966" y="353" width="229" height="112" rx="16" class="stage border"/>
+  <text x="989" y="386" class="boxTitle ink">5 · Data construction</text>
+  <text x="989" y="414" class="body muted">Association + field-type rules</text>
+  <text x="989" y="440" class="body muted">Dictionary-backed values</text>
+  <text x="989" y="461" class="body muted">Format and export</text>
+
+  <rect x="1220" y="353" width="164" height="112" rx="16" class="output border"/>
+  <text x="1243" y="385" class="boxTitle ink">Medical</text>
+  <text x="1243" y="409" class="boxTitle ink">test data</text>
+  <text x="1243" y="438" class="body muted">Formatted</text>
+  <text x="1243" y="460" class="body muted">output</text>
+
+  <path d="M348 206 H422" class="arrow"/>
+  <path d="M348 324 H387 V238 H422" class="dash"/>
+  <path d="M651 214 H694" class="arrow"/>
+  <path d="M923 214 H966" class="arrow"/>
+  <path d="M348 433 H602 V304 H950 V250 H966" class="dash"/>
+  <path d="M1080 270 V312 H809 V353" class="arrow"/>
+  <path d="M348 544 H643 V409 H694" class="dash"/>
+  <path d="M923 409 H966" class="arrow"/>
+  <path d="M348 654 H944 V430 H966" class="dash"/>
+  <path d="M1195 409 H1220" class="arrow"/>
+
+  <text x="424" y="511" class="small muted">Solid arrows: processing sequence</text>
+  <text x="424" y="535" class="small muted">Dashed arrows: disclosed reference source</text>
+</svg>
