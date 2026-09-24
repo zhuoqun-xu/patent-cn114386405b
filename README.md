@@ -1,6 +1,6 @@
 # Patent CN114386405B: Structure-Aware Generation of Medical Test Data
 
-> A patented pipeline for generating structure-consistent medical test data from database tables and medical data sources.
+> A patented method for generating medical software test data while preserving relationships among fields across database tables.
 
 Also available in [Chinese](README.zh.md) and [Japanese](README.ja.md).
 
@@ -15,7 +15,7 @@ Also available in [Chinese](README.zh.md) and [Japanese](README.ja.md).
 
 ## Business problem
 
-Medical software needs sufficiently large, scenario-relevant datasets for testing. Real clinical records are sensitive and may not be available to developers. Manually assembling historical records into test datasets is inefficient and costly, while small or unrealistic test sets may not exercise the intended workflows. I addressed this problem with an automated method that uses table information and available data sources to generate medical test data.
+ Medical software testing needs enough data for scenarios that involve several related tables. Real clinical records are sensitive and may not be available to developers. Manually assembling historical records is slow and costly. Small datasets and values generated without field relationships may fail to test behavior across tables. I designed a method that identifies field meanings and associations from table information. It derives generation rules from available data sources and produces medical data for software testing.
 
 ## Field dependencies
 
