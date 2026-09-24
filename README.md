@@ -15,7 +15,9 @@ Also available in [Chinese](README.zh.md) and [Japanese](README.ja.md).
 
 ## Business problem
 
- Medical software testing needs enough data for scenarios that involve several related tables. Real clinical records are sensitive and may not be available to developers. Manually assembling historical records is slow and costly. Small datasets and values generated without field relationships may fail to test behavior across tables. I designed a method that identifies field meanings and associations from table information. It derives generation rules from available data sources and produces medical data for software testing.
+ While developing a medical software system, I led automated testing and added a testing stage to the CI/CD pipeline. The test strategy covered four levels: unit, API, business workflow, and data. Passing create, read, update, and delete tests did not by itself establish that the system would remain correct as data volume grew. For example, homepage dashboard metrics could become inaccurate, and related records across multiple tables could become inconsistent.
+
+Testing these cases required enough scenario-relevant data with valid cross-table relationships. Real production medical records were sensitive and unavailable for testing, while manually assembling historical data was slow and difficult to scale consistently. To address this gap, I designed the method described in this patent: parse table fields and their relationships, derive generation rules from available data sources, and automatically generate medical test data for software testing.
 
 ## Field dependencies
 
